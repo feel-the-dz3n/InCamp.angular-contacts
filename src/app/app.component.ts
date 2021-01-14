@@ -8,10 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   selectedContact: any;
   title = 'Some cool app';
-
-  contacts = [
-    'Yaroslav', 'Alex', 'Ruslan'
-  ]
+  newContactName: string = '';
+  contacts = ['Yaroslav', 'Alex', 'Ruslan']
 
   isSelected(contact: any) {
     return this.selectedContact === contact;
@@ -19,5 +17,10 @@ export class AppComponent {
 
   selectContact(contact: any) {
     this.selectedContact = contact;
+  }
+
+  addContact() {
+    this.contacts.push(this.newContactName);
+    this.newContactName = '';
   }
 }

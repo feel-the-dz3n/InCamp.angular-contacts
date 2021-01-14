@@ -9,7 +9,7 @@
 
 <h2>{{selectedContact}}</h2>
 
-<form>
-  <input type="text">
-  <button type="submit">Add Contact</button>
+<form (submit)="addContact()">
+  <input type="text" [(ngModel)]="newContactName" name="contactName">
+  <button type="submit">Add Contact {{newContactName}}</button>
 </form>
