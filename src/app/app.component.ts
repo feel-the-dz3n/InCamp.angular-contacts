@@ -13,6 +13,10 @@ export class AppComponent {
     'Yaroslav', 'Alex', 'Ruslan'
   ]
 
+  isSelected(contact: any) {
+    return this.selectedContact === contact;
+  }
+
   selectContact(contact: any) {
     this.selectedContact = contact;
   }
