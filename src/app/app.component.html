@@ -1,19 +1,23 @@
-<h1>{{title}}</h1>
+<nav>
+  <h1>{{title}}</h1>
+</nav>
 
-<h2>Contacts</h2>
-<ul>
-  <li *ngFor="let contact of contacts" (click)="selectContact(contact)" [class.selected]="isSelected(contact)">
-    {{contact.name}}
-  </li>
-</ul>
+<aside>
+  <h2>Contacts</h2>
+  <ul>
+    <li *ngFor="let contact of contacts" (click)="selectContact(contact)" [class.selected]="isSelected(contact)">
+      {{contact.name}}
+    </li>
+  </ul>
+</aside>
 
-<div *ngIf="selectedContact">
+<main *ngIf="selectedContact">
   <h2>Change {{selectedContact.name}}</h2>
   <input type="text" [(ngModel)]="selectedContact.name" name="changeContactName">
-</div>
 
-<form (submit)="addContact()">
-  <h2>New Contact</h2>
-  <input type="text" [(ngModel)]="newContactName" name="contactName">
-  <button type="submit">Add Contact {{newContactName}}</button>
-</form>
+  <form (submit)="addContact()">
+    <h2>New Contact</h2>
+    <input type="text" [(ngModel)]="newContactName" name="contactName">
+    <button type="submit">Add Contact {{newContactName}}</button>
+  </form>
+</main>
