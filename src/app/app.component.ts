@@ -12,7 +12,7 @@ export class AppComponent {
   contacts: { name: string }[] = [
     { name: 'Yaroslav' },
     { name: 'Alex' },
-    { name: 'Ruslan' }];
+    { name: 'Ruslan Shedy' }];
 
   isSelected(contact: any) {
     return this.selectedContact === contact;
