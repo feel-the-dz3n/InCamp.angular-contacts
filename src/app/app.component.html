@@ -3,13 +3,17 @@
 <h2>Contacts</h2>
 <ul>
   <li *ngFor="let contact of contacts" (click)="selectContact(contact)" [class.selected]="isSelected(contact)">
-    {{contact}}
+    {{contact.name}}
   </li>
 </ul>
 
-<h2>{{selectedContact}}</h2>
+<div *ngIf="selectedContact">
+  <h2>Change {{selectedContact.name}}</h2>
+  <input type="text" [(ngModel)]="selectedContact.name" name="changeContactName">
+</div>
 
 <form (submit)="addContact()">
+  <h2>New Contact</h2>
   <input type="text" [(ngModel)]="newContactName" name="contactName">
   <button type="submit">Add Contact {{newContactName}}</button>
 </form>

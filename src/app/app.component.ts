@@ -9,7 +9,10 @@ export class AppComponent {
   selectedContact: any;
   title = 'Some cool app';
   newContactName: string = '';
-  contacts = ['Yaroslav', 'Alex', 'Ruslan']
+  contacts: { name: string }[] = [
+    { name: 'Yaroslav' },
+    { name: 'Alex' },
+    { name: 'Ruslan' }];
 
   isSelected(contact: any) {
     return this.selectedContact === contact;
@@ -20,7 +23,7 @@ export class AppComponent {
   }
 
   addContact() {
-    this.contacts.push(this.newContactName);
+    this.contacts.push({ name: this.newContactName });
     this.newContactName = '';
   }
 }
