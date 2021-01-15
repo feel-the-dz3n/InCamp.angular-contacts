@@ -11,29 +11,12 @@ nav {
   @extend .bg-light;
 }
 
-h1 {
-  @extend .navbar-brand;
-}
-
-h2 {
-  margin-top: 20px;
-}
-
 aside {
   @extend .col-4;
 }
 
-main {
+app-contact-detail {
   @extend .col-8;
-}
-
-input[type="text"] {
-  @extend .form-control;
-}
-
-button {
-  @extend .btn;
-  @extend .btn-primary;
 }
 
 ul {
@@ -50,8 +33,4 @@ li {
 
 li.selected {
   @extend .active;
-}
-
-form button {
-  margin-top: 10px;
 }

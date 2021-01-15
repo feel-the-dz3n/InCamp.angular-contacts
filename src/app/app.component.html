@@ -9,15 +9,11 @@
       {{contact.name}}
     </li>
   </ul>
-</aside>
-
-<main *ngIf="selectedContact">
-  <h2>Change {{selectedContact.name}}</h2>
-  <input type="text" [(ngModel)]="selectedContact.name" name="changeContactName">
-
   <form (submit)="addContact()">
     <h2>New Contact</h2>
     <input type="text" [(ngModel)]="newContactName" name="contactName">
     <button type="submit">Add Contact {{newContactName}}</button>
   </form>
-</main>
+</aside>
+
+<app-contact-detail *ngIf="selectedContact" [contact]="selectedContact"></app-contact-detail>
