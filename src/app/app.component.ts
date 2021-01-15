@@ -14,16 +14,12 @@ export class AppComponent {
     { name: 'Alex' },
     { name: 'Ruslan Shedy' }];
 
-  isSelected(contact: any) {
-    return this.selectedContact === contact;
+  addContact() {
+    this.contacts.push({ name: this.newContactName });
+    this.newContactName = '';
   }
 
   selectContact(contact: any) {
     this.selectedContact = contact;
-  }
-
-  addContact() {
-    this.contacts.push({ name: this.newContactName });
-    this.newContactName = '';
   }
 }

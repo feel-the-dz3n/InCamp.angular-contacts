@@ -18,19 +18,3 @@ aside {
 app-contact-detail {
   @extend .col-8;
 }
-
-ul {
-  @extend .list-group;
-}
-
-ul > li {
-  @extend .list-group-item;
-}
-
-li {
-  cursor: pointer;
-}
-
-li.selected {
-  @extend .active;
-}
